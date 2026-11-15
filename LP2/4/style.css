@@ -1,0 +1,36 @@
+body { 
+    font-family: sans-serif; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 10px; 
+}
+.bar { 
+    display: flex; 
+    gap: 8px; 
+    flex-wrap: wrap; 
+    margin-bottom: 15px; }
+input, select { 
+    padding: 7px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; }
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 12px; }
+.card { 
+    border: 1px solid #ccc; 
+    border-top: 4px solid #2563eb; 
+    padding: 12px; 
+    border-radius: 6px; }
+small { 
+    background: #dbeafe; 
+    color: #1e40af; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    font-weight: bold; }
+#empty { 
+    text-align: center; 
+    color: red; 
+    font-weight: bold; 
+    margin-top: 20px; 
+}

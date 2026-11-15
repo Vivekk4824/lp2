@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration with MongoDB</title>
+    <style>
+        body { font-family: sans-serif; max-width: 420px; margin: 30px auto; }
+        input, select, button { width: 100%; padding: 8px; margin: 6px 0; box-sizing: border-box; }
+        button { background: #2563eb; color: #fff; border: none; cursor: pointer; font-weight: bold; }
+        #msg { color: green; font-weight: bold; }
+        li { margin: 5px 0; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h2>Event Registration (MongoDB)</h2>
+
+    <form id="regForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="10-Digit Phone" pattern="\d{10}" required>
+        <select id="track" required>
+            <option value="">-- Select Track --</option>
+            <option value="Web Dev">Web Dev</option>
+            <option value="AI & ML">AI & ML</option>
+            <option value="Cloud">Cloud</option>
+        </select>
+        <button type="submit">Register &amp; Save</button>
+    </form>
+
+    <p id="msg"></p>
+    <h3>Registered Users (From DB):</h3>
+    <ul id="userList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

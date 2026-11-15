@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Event Dashboard</title>
+    <style>
+        body { font-family: sans-serif; max-width: 750px; margin: 20px auto; padding: 10px; }
+        .top { display: flex; justify-content: space-between; align-items: center; }
+        form { display: flex; gap: 6px; flex-wrap: wrap; margin: 15px 0; }
+        input, select, button { padding: 7px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #1e3a8a; color: #fff; }
+        .del { background: #dc2626; color: #fff; border: none; cursor: pointer; }
+        .edit { background: #2563eb; color: #fff; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h2>Admin Event Dashboard (CRUD)</h2>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Create / Update Form -->
+    <form id="eventForm">
+        <input type="hidden" id="eventId">
+        <input type="text" id="title" placeholder="Event Title" required>
+        <select id="category">
+            <option value="Technical">Technical</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Sports">Sports</option>
+        </select>
+        <input type="date" id="date" required>
+        <input type="text" id="venue" placeholder="Venue" required>
+        <button type="submit" id="saveBtn">Add Event</button>
+    </form>
+
+    <!-- Read / Delete Table -->
+    <table>
+        <thead>
+            <tr><th>Title</th><th>Category</th><th>Date</th><th>Venue</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="eventTable"></tbody>
+    </table>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration &amp; DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Event Registration</h2>
+        <span id="timer">05:00</span>
+        <button id="themeBtn">Dark Mode</button>
+    </header>
+
+    <form id="regForm">
+        <input type="text" id="name" placeholder="Full Name">
+        <span class="err" id="nameErr"></span>
+
+        <input type="email" id="email" placeholder="Email">
+        <span class="err" id="emailErr"></span>
+
+        <input type="tel" id="phone" placeholder="10-digit Phone">
+        <span class="err" id="phoneErr"></span>
+
+        <input type="password" id="pass" placeholder="Password (min 6 chars)">
+        <span class="err" id="passErr"></span>
+
+        <button type="submit">Register</button>
+        <p id="msg"></p>
+    </form>
+
+    <section class="box">
+        <p>Live Greeting: <strong id="preview">Guest</strong></p>
+
+        <p id="text">DOM Text Formatting Demo</p>
+        <button onclick="format('bold')">Bold</button>
+        <button onclick="format('italic')">Italic</button>
+        <button onclick="format('upper')">UPPER</button>
+        <button id="toggleBtn">Show/Hide Rules</button>
+
+        <p id="rules" hidden>Rule 1: Carry ID Card. Rule 2: Bring Laptop.</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

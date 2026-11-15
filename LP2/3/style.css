@@ -1,0 +1,44 @@
+body { 
+    font-family: sans-serif;
+    max-width: 450px; 
+    margin: 20px auto;
+    padding: 10px; 
+}
+body.dark { 
+    background: #1e293b; 
+    color: #fff; 
+}
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px; 
+}
+form, .box { 
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    border-radius: 6px; 
+    margin-bottom: 15px; 
+}
+input { 
+    display: block; 
+    width: 100%; 
+    padding: 8px; 
+    margin-top: 8px; 
+    box-sizing: border-box; 
+}
+.err { 
+    color: red; 
+    font-size: 12px; 
+    display: block;
+     min-height: 15px;
+}
+button { 
+    padding: 6px 12px; 
+    margin-top: 8px; 
+    cursor: pointer; 
+}
+#msg { 
+    color: green; 
+    font-weight: bold; 
+}

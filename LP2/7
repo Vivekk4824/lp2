@@ -1,0 +1,34 @@
+
+.sol
+pragma solidity ^0.8.20;
+
+contract EventRegistration {
+    address public organizer;
+    string public eventName;
+    uint256 public totalRegistered;
+
+    struct Participant {
+        string name;
+        bool isRegistered;
+    }
+
+    mapping(address => Participant) public participants;
+
+    constructor(string memory _eventName) {
+        organizer = msg.sender;
+        eventName = _eventName;
+    }
+
+    // Register the caller for the event
+    function register(string memory _name) public {
+        require(!participants[msg.sender].isRegistered, "Already registered!");
+        participants[msg.sender] = Participant(_name, true);
+        totalRegistered++;
+    }
+
+    // Check participant details
+    function getParticipant(address _user) public view returns (string memory, bool) {
+        Participant memory p = participants[_user];
+        return (p.name, p.isRegistered);
+    }
+}
